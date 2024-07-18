@@ -1,6 +1,6 @@
 # Social Auth Firebase
 
-This project, `social-auth-firebase`, is a React application that integrates social authentication using Firebase. It provides a user-friendly authentication system, allowing users to log in using various social media accounts. The application is styled with Material UI and Emotion, and uses Vite as the build tool.
+This project, `react-social-auth-with-firebase`, is a React application that integrates social authentication using Firebase. It provides a user-friendly authentication system, allowing users to log in using various social media accounts. The application is styled with Material UI and Emotion, and uses Vite as the build tool.
 
 ## Features
 
