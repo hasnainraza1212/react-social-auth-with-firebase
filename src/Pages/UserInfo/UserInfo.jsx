@@ -25,9 +25,8 @@ const UserInfo = () => {
 
     const navigate = useNavigate()
     const auth = getAuth(app)
-    const handleSignOut = ()=>{
-      auth.signOut()
-      localStorage.removeItem("Auth")
+    const handleSignOut = async()=>{
+     await auth.signOut()
       navigate('/login', {replace:true})
     }
     const user = JSON.parse(localStorage.getItem("user"))
@@ -69,9 +68,9 @@ const UserInfo = () => {
                <UserCardField field={"Name : "} value={user?.displayName}/>
                <UserCardField field={"Email : "} value={user?.email}/>
                <UserCardField field={"Email Verified : "} value={user?.emailVerified?"true":"false"}/>
-               <UserCardField field={"Provider  :"} value={user.providerData[0].providerId}/>
-               <UserCardField field={"Last Login At :"} value={moment(parseInt(user.lastLoginAt)).fromNow()}/>
-               <UserCardField field={"UID : "} value={user.uid}/>
+               <UserCardField field={"Provider  :"} value={user?.providerData[0]?.providerId}/>
+               <UserCardField field={"Last Login At :"} value={moment(parseInt(user?.lastLoginAt)).fromNow()}/>
+               <UserCardField field={"UID : "} value={user?.uid}/>
               
         </Box>
 
