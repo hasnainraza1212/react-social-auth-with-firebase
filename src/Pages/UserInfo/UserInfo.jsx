@@ -72,8 +72,6 @@ const UserInfo = () => {
                <UserCardField field={"Provider  :"} value={user.providerData[0].providerId}/>
                <UserCardField field={"Last Login At :"} value={moment(parseInt(user.lastLoginAt)).fromNow()}/>
                <UserCardField field={"UID : "} value={user.uid}/>
-
-
               
         </Box>
 
